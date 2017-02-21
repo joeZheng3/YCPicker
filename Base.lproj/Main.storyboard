@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md5-9q-fEk">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="拍照"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xv-GF-Q0N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0r-PJ-ibX">
+                                <rect key="frame" x="16" y="73" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="获取系统相册"/>
+                                <connections>
+                                    <action selector="getPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXd-Sc-eIn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgm-xH-UEc">
+                                <rect key="frame" x="16" y="118" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="获取相机胶卷"/>
+                                <connections>
+                                    <action selector="getPicAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pDv-hz-IgR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-29-lHL">
+                                <rect key="frame" x="16" y="163" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="视频录制"/>
+                                <connections>
+                                    <action selector="takeMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5y-rQ-H0g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUy-b2-hJs">
+                                <rect key="frame" x="16" y="208" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="自定义拍照界面"/>
+                                <connections>
+                                    <action selector="customTakePic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nex-7F-fWL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pIB-Y3-Oci">
+                                <rect key="frame" x="16" y="253" width="343" height="394"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GUy-b2-hJs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BQ9-9g-g40"/>
+                            <constraint firstItem="5Bi-29-lHL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Bgu-ab-27D"/>
+                            <constraint firstItem="hgm-xH-UEc" firstAttribute="top" secondItem="N0r-PJ-ibX" secondAttribute="bottom" constant="15" id="COW-xr-wmS"/>
+                            <constraint firstItem="GUy-b2-hJs" firstAttribute="top" secondItem="5Bi-29-lHL" secondAttribute="bottom" constant="15" id="CdF-eX-ua4"/>
+                            <constraint firstItem="N0r-PJ-ibX" firstAttribute="top" secondItem="Md5-9q-fEk" secondAttribute="bottom" constant="15" id="DQO-XS-r93"/>
+                            <constraint firstItem="Md5-9q-fEk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Dxh-4G-ZcU"/>
+                            <constraint firstItem="pIB-Y3-Oci" firstAttribute="top" secondItem="GUy-b2-hJs" secondAttribute="bottom" constant="15" id="GcU-nv-QUL"/>
+                            <constraint firstItem="N0r-PJ-ibX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K8L-9E-ZIe"/>
+                            <constraint firstItem="pIB-Y3-Oci" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Kbk-Bi-fRX"/>
+                            <constraint firstItem="hgm-xH-UEc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N4A-2L-4Yk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pIB-Y3-Oci" secondAttribute="bottom" constant="20" id="PHC-0T-K6E"/>
+                            <constraint firstItem="N0r-PJ-ibX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TQU-6x-P1l"/>
+                            <constraint firstItem="GUy-b2-hJs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Uj2-SC-CAk"/>
+                            <constraint firstItem="N0r-PJ-ibX" firstAttribute="top" secondItem="Md5-9q-fEk" secondAttribute="bottom" constant="15" id="bp8-0v-OAL"/>
+                            <constraint firstItem="pIB-Y3-Oci" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="c0G-sa-1wF"/>
+                            <constraint firstItem="Md5-9q-fEk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cpq-gD-C14"/>
+                            <constraint firstItem="Md5-9q-fEk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="eQd-wO-Zgl"/>
+                            <constraint firstItem="5Bi-29-lHL" firstAttribute="top" secondItem="hgm-xH-UEc" secondAttribute="bottom" constant="15" id="eei-P0-9SB"/>
+                            <constraint firstItem="5Bi-29-lHL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nfw-kY-Zu5"/>
+                            <constraint firstItem="hgm-xH-UEc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wpK-xs-9yS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="pIB-Y3-Oci" id="rpT-n1-E3p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
