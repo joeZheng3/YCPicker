@@ -82,7 +82,7 @@
     self.pickerVc.showsCameraControls = YES; //默认YES
 //    self.pickerVc.cameraDevice = UIImagePickerControllerCameraDeviceFront; // 设置前置
     self.pickerVc.cameraFlashMode = UIImagePickerControllerCameraFlashModeOn;//设置闪光灯开
-    self.pickerVc.cameraViewTransform = CGAffineTransformScale(self.pickerVc.cameraViewTransform, 0.5, 0.5); //设置相机视图变换(放大缩小，旋转等)
+//    self.pickerVc.cameraViewTransform = CGAffineTransformScale(self.pickerVc.cameraViewTransform, 0.5, 0.5); //设置相机视图变换(放大缩小，旋转等)
     
     [self presentViewController:self.pickerVc animated:YES completion:^{}];
 }

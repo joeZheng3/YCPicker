@@ -10,4 +10,6 @@
 
 @interface NewCoverVc : UIViewController
 
+- (id)initWithOriginImage:(UIImage*)originImage layerImage:(UIImage*)layerImage picker:(UIImagePickerController*)picker;
+
 @end

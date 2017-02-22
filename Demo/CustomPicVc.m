@@ -12,7 +12,6 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "Masonry.h"
 
-#define MY_LAZY(object, assignment) (object = object ?: assignment)
 
 @interface CustomPicVc ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -99,6 +98,7 @@
         button.backgroundColor = [UIColor blueColor];
         [button setTitle:@"拍照" forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(takePhoto) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:button];
         button;
     }));
@@ -112,6 +112,7 @@
         button2.backgroundColor = [UIColor blueColor];
         [button2 setTitle:@"取消" forState:UIControlStateNormal];
         [button2 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [button2 addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:button2];
         button2;
     }));
@@ -135,11 +136,11 @@
         NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
         if ([mediaType isEqualToString:(NSString*)kUTTypeImage]) {
             UIImage *originImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-            
+            NewCoverVc *vc = [[NewCoverVc alloc]initWithOriginImage:originImage
+                                                         layerImage:self.layView.imageView.image
+                                                             picker:self.pickerVc];
+            [self.pickerVc pushViewController:vc animated:YES];
         }
-        
-        
-        
     }
 }
 

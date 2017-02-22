@@ -11,6 +11,11 @@
 @interface LayView : UIView
 
 /**
+ 遮罩层图片
+ */
+@property (nonatomic,strong) UIImageView *imageView;
+
+/**
  @功能：初始化遮罩层视图
  @参数：frame 相机对象
  @返回值：self
