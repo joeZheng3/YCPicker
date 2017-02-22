@@ -130,7 +130,17 @@
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
-
+    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera)
+    {
+        NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+        if ([mediaType isEqualToString:(NSString*)kUTTypeImage]) {
+            UIImage *originImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+            
+        }
+        
+        
+        
+    }
 }
 
 
