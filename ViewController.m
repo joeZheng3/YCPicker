@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "CustomPicVc.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -127,7 +128,8 @@
 }
 
 - (IBAction)customTakePic:(id)sender {
-    
+    CustomPicVc *vc = [[CustomPicVc alloc]init];
+    [self presentViewController:vc animated:YES completion:^{}];
 }
 
 - (void)image:(UIImage*)image didFinishSavingWithError:(NSError*)error contextInfo:(void*)contextInfo
