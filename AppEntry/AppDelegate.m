@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MyVc.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 #pragma mark - Life Cycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //Demo
+    //ViewController
+    
+    //First Demo
+//    MyVc *vc = [[MyVc alloc]init];
+//    self.window.rootViewController = vc;
     
     return YES;
 }

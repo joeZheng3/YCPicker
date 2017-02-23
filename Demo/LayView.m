@@ -196,6 +196,7 @@
     else
     {
         self.imageView.image = [UIImage imageNamed:@"overlay"];
+        switchLay = TRUE;
     }
 }
 
